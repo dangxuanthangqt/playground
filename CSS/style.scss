@@ -1,0 +1,78 @@
+$primaty-color: #ffc87a;
+$secondary-color: #1a2b5f;
+
+html {
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Popins", sans-serif;
+  color: $secondary-color;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@mixin flex($justify: flex-start, $alignItem: center, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $alignItem;
+  flex-wrap: $wrap;
+}
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto; // cho ra giua khi man hinh > 1440
+}
+.container {
+  max-width: 1210px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.header {
+  padding-top: 4rem;
+  &__inner {
+    @include flex(space-between, center, nowrap);
+    max-width: 100%;
+  }
+  &__logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: $secondary-color;
+    &--primary {
+      color: $primaty-color;
+    }
+  }
+  &__menuList {
+    @include flex();
+  }
+  &__menuItem {
+    margin-left: 5rem;
+    color: $secondary-color;
+    &:last-child {
+      margin-left: 7rem;
+    }
+  }
+  &__menuLink {
+    font-size: 1.6rem;
+    color: $secondary-color;
+    font-weight: 400;
+    transition: color .25s linear;
+    &:hover{
+        color: $primaty-color;
+    }
+  }
+  &__login{
+      display: inline-block;
+      padding: 1rem 3rem;
+      border-radius: 2rem;
+      border: 1px solid;
+  }
+}
