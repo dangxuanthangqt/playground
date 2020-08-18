@@ -12,6 +12,7 @@ html {
 body {
   font-family: "Popins", sans-serif;
   color: $secondary-color;
+  line-height: 1.4;
 }
 a {
   text-decoration: none;
@@ -64,15 +65,59 @@ img {
     font-size: 1.6rem;
     color: $secondary-color;
     font-weight: 400;
-    transition: color .25s linear;
-    &:hover{
-        color: $primaty-color;
+    transition: color 0.25s linear;
+    &:hover {
+      color: $primaty-color;
     }
   }
-  &__login{
-      display: inline-block;
-      padding: 1rem 3rem;
-      border-radius: 2rem;
-      border: 1px solid;
+  &__login {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: 1px solid;
+  }
+}
+.banner {
+  margin: 0 auto;
+  padding-top: 10rem;
+  max-width: 80rem;
+  text-align: center;
+  &__heading {
+    font-weight: 800;
+    font-size: 6rem;
+    margin-bottom: 3rem;
+  }
+  &__description {
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 4.5rem;
+  }
+  &__buttons {
+      display: flex;
+      justify-content: center;;
+      & .btn{
+          margin: 0 1rem;
+      }
+  }
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  font-size: 1.6rem;
+  color: $secondary-color;
+  padding: 1.5rem 4rem;
+  &--primary {
+    background-color: $primaty-color;
+  }
+  &--rounded {
+    border-radius: 2rem;
+  }
+  &--border {
+    border: 1px solid;
+  }
+  &--shadow{
+      box-shadow: 0 30px 91px #ffc87a;
   }
 }
