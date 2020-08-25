@@ -60,7 +60,7 @@ img {
 .header {
   padding-top: 4rem;
   &__inner {
-    @include flex(space-between, center, nowrap);
+    @include flex(space-between, center, wrap);
   }
   &__logo {
     font-size: 2.5rem;
@@ -70,6 +70,11 @@ img {
     &--primary {
       color: $primaty-color;
     }
+  }
+  &__menu-mobile{
+    display: none;
+    width: 100%;
+
   }
   &__menuList {
     @include flex();
@@ -95,6 +100,9 @@ img {
     padding: 1rem 3rem;
     border-radius: 2rem;
     border: 1px solid;
+    &--mobile{
+      display: none;
+    }
   }
 }
 .banner {
@@ -118,6 +126,9 @@ img {
     justify-content: center;
     & .btn {
       margin: 0 1rem;
+      &:hover{
+        color: rgb(31, 224, 37);
+      }
     }
   }
 }
@@ -152,6 +163,9 @@ img {
     padding: 0 3rem 3.5rem;
     border-radius: 3rem;
     box-shadow: 0 10px 50px #fff4f6;
+    & img{
+      margin: 0 auto;
+    }
   }
   &__img {
     height: 23rem;
@@ -277,6 +291,10 @@ img {
     font-size: 3rem;
     color: $secondary-color;
     text-underline-position: under;
+    transition: color 0.25s linear;
+    &:hover{
+      color: $primaty-color;
+    }
   }
 }
 
@@ -467,6 +485,7 @@ img {
   }
 }
 .video{
+  width: 268px;
   border-radius: 10px;
   overflow: hidden;
   z-index: 1;
@@ -506,6 +525,27 @@ img {
   .header {
     &__menu {
       display: none;
+
+    }
+    &__menuList{
+      justify-content: space-between;
+    }
+    &__menuItem{
+      text-align: center;
+      width: 30%;
+      margin-left: 0;
+      &:last-child{
+        margin-left: 0;
+      }
+    }
+    &__menu-mobile{
+      margin-top: 3rem;
+      display: block;
+    }
+    &__login{
+      &--mobile{
+        display: block;
+      }
     }
   }
   .banner {
