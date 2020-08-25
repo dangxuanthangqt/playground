@@ -436,8 +436,12 @@ img {
   }
   &__item {
     width: 25%;
+    & a {
+      display: block;
+    }
   }
   &__logo {
+    text-align: center;
     font-family: inherit;
     font-size: 3rem;
     font-weight: bold;
@@ -445,9 +449,11 @@ img {
     &--primary {
       color: $primaty-color;
     }
+   
   }
   &__list-1 {
     &__item {
+      text-align: center;
       font-size: 1.6rem;
       font-weight: bold;
       color: $secondary-color;
@@ -459,6 +465,11 @@ img {
       }
     }
   }
+}
+.video{
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
 }
 @media screen and (max-width: 1023px) {
   .category {
@@ -485,6 +496,9 @@ img {
     &__content {
       width: 100%;
     }
+  }
+  .video{
+    display: none;
   }
 }
 

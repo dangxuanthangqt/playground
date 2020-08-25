@@ -484,7 +484,11 @@ img {
 .footer__item {
   width: 25%;
 }
+.footer__item a {
+  display: block;
+}
 .footer__logo {
+  text-align: center;
   font-family: inherit;
   font-size: 3rem;
   font-weight: bold;
@@ -494,6 +498,7 @@ img {
   color: #ffc87a;
 }
 .footer__list-1__item {
+  text-align: center;
   font-size: 1.6rem;
   font-weight: bold;
   color: #1a2b5f;
@@ -503,6 +508,12 @@ img {
 }
 .footer__list-1__item:hover {
   color: #ffc87a;
+}
+
+.video {
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1023px) {
@@ -533,6 +544,10 @@ img {
   }
   .feature__content {
     width: 100%;
+  }
+
+  .video {
+    display: none;
   }
 }
 @media screen and (max-width: 767px) {
